@@ -5,9 +5,11 @@ Appreciated by the industry clients and colleagues for her technical troubleshoo
 Now Iris is looking for a career change to become an IT professional to fullfills her childhood dream.`
 
 
-var previousClickedTab = "profile";
+var previousClickedTab = "current";
 
 $(document).on("click", ".nav-item", function (event) {
+    event.preventDefault();
+
     var activeTab = $(event.currentTarget).attr("data-name").trim();
     console.log(activeTab);
     // console.log(event);
@@ -32,7 +34,7 @@ $(document).on("click", ".nav-item", function (event) {
 
     switch (activeTab) {
         case "profile":
-            $(".card-text").html(textProfile);
+            $("#content").html(textProfile);
             $("#profile").addClass("active");
             break;
         case "current":
