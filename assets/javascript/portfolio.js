@@ -2,7 +2,7 @@ var textProfile = `A former professional electrical/software/field appliation en
 
 Appreciated by the industry clients and colleagues for her technical troubleshooting and managerial skills, Iris has demonstrated her ability to multitask enigneer duties with business devlopment.<br><br>
 
-Now Iris is looking for a career change to become an IT professional to fullfills her childhood dream.`
+Now Iris is looking for a career change to become an IT professional to fullfill her childhood dream.`
 
 
 var previousClickedTab = "current";
