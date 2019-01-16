@@ -17,6 +17,7 @@ $(document).on("click", ".nav-item", function (event) {
     switch (previousClickedTab) {
         case "profile":
             $("#profile").removeClass("active");
+            $(".current-item").addClass("invisible");
             break;
         case "current":
             $("#current").removeClass("active");
@@ -39,6 +40,7 @@ $(document).on("click", ".nav-item", function (event) {
             break;
         case "current":
             $(".card-text").html("");
+            $(".current-item").removeClass("invisible");
             $("#current").addClass("active");
             break;
         case "past":
