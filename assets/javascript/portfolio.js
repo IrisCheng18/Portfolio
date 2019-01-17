@@ -4,23 +4,24 @@ Appreciated by the industry clients and colleagues for her technical troubleshoo
 
 Now Iris is looking for a career change to become an IT professional to fullfill her childhood dream.`
 
+let textContact = `<br>Address: San Diego, CA <br><br>Email: yue_cheng@hotmail.com<br><br>Phone: 858-221-3080`
 
-var previousClickedTab = "current";
+let previousClickedTab = "current";
 
 $(document).on("click", ".nav-item", function (event) {
     event.preventDefault();
 
-    var activeTab = $(event.currentTarget).attr("data-name").trim();
+    let activeTab = $(event.currentTarget).attr("data-name").trim();
     console.log(activeTab);
     // console.log(event);
 
     switch (previousClickedTab) {
         case "profile":
             $("#profile").removeClass("active");
-            $(".current-item").addClass("invisible");
             break;
         case "current":
             $("#current").removeClass("active");
+            $(".current-item").attr("style", "width: 20rem; height: 25rem; display: none;");
             break;
         case "past":
             $("#past").removeClass("active");
@@ -39,20 +40,20 @@ $(document).on("click", ".nav-item", function (event) {
             $("#profile").addClass("active");
             break;
         case "current":
-            $(".card-text").html("");
-            $(".current-item").removeClass("invisible");
+            $("#content").html("");
+            $(".current-item").attr("style", "width: 20rem; height: 25rem;");
             $("#current").addClass("active");
             break;
         case "past":
-            $(".card-text").html("");
+            $("#content").html("");
             $("#past").addClass("active");
             break;
         case "education":
-            $(".card-text").html("");
+            $("#content").html("");
             $("#education").addClass("active");
             break;
         case "contact":
-            $(".card-text").html("");
+            $("#content").html(textContact);
             $("#contact").addClass("active");
             break;
         default:
