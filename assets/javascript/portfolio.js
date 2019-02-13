@@ -9,8 +9,8 @@ let txtEduction = `<br>2019 Certification of Full-Stack Web Development<br>UCSD 
                     <br>2005 Master of Science (Computer Vision and Image Processing)<br>Southern Illinois University Edwardsville, Edwardsville, IL<br>
                     <br>1996 Bachelor of Enginnering (Electrical Engineering)<br>Beijing University of Aeronautics and Astronautics, Beijing, China`;
 let txtPast =`<br>2001-2016 Westar Display Technologies, Inc
-              <br>~2013-2016 Field Support and Marketing in Asia, Beijing, China
-              <br>~2001-2013 Electrical/Software Engineer, St. Charles, MO, U.S.A.`;
+              <br>~ 2013-2016 Field Support and Marketing in Asia, Beijing, China
+              <br>~ 2001-2013 Electrical/Software Engineer, St. Charles, MO, U.S.A.`;
 let previousClickedTab = "current";
 
 $(document).on("click", ".nav-item", function (event) {
@@ -26,7 +26,7 @@ $(document).on("click", ".nav-item", function (event) {
         //     break;
         case "current":
             $("#current").removeClass("active");
-            $(".current-item").attr("style", "width: 20rem; height: 26rem; display: none;");
+            $(".current-item").attr("style", "width: 100%; height: 29rem; display: none;");
             break;
         case "past":
             $("#past").removeClass("active");
@@ -46,7 +46,7 @@ $(document).on("click", ".nav-item", function (event) {
         //     break;
         case "current":
             $("#content").html("");
-            $(".current-item").attr("style", "width: 20rem; height: 26rem;");
+            $(".current-item").attr("style", "width: 100%; height: 29rem;");
             $("#current").addClass("active");
             break;
         case "past":
